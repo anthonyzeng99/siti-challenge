@@ -19,5 +19,7 @@
 * Replace db address in `config/config.js`
 * `yarn install` -> `yarn start` or `npm install` -> `npm start`
 * Request that require data to be sent in body should be in JSON.
+## Demo
+ * Heroku url: https://fathomless-dawn-52799.herokuapp.com
 
 
