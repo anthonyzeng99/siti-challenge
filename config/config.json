@@ -2,11 +2,11 @@
   "test": {
     "PORT": 3000,
     "MONGODB_URI": "mongodb://localhost:27017/EventsTest",
-    "JWT_SECRET": "3y%ZtG6MaENfo@3Z;=TVQojWv){zK2$mNCo4yNU)dk>3hdjoi3Fkcn84YfjjGH2@"
+    "JWT_SECRET": "generatenewkeys"
   },
   "development": {
     "PORT": 3000,
     "MONGODB_URI": "mongodb://localhost:27017/EventsApp",
-    "JWT_SECRET": "ZP8cm@(rB&rcCRwMq4p98v3N]AXyW=[y}9A)Efg#7jjALMd4TeL?yPgBe99UwdBb"
+    "JWT_SECRET": "generatenewkeys"
   }
 }

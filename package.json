@@ -15,6 +15,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start-watch": "nodemon server.js"
+    "start-watch": "nodemon server.js",
+    "test": "export NODE_ENV=test && mocha server/**/*.test.js",
   }
 }

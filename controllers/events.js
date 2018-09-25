@@ -1,5 +1,5 @@
-const axios = require('axios');
 const _ = require('lodash');
+const axios = require('axios');
 
 const {mongoose} = require("../db/mongoose");
 const {User} = require("../db/models/user");
@@ -33,8 +33,8 @@ eventsController.createUser = [
 
 eventsController.loginUser = [
   async (req, res) => {
+    const body = _.pick(req.body, ['email', 'password']);
     try {
-      const body = _.pick(req.body, ['email', 'password']);
       const user = await User.findByCredentials(body.email, body.password);
       const token = await user.generateAuthToken();
       res.header('x-auth', token).send(user);
@@ -47,7 +47,6 @@ eventsController.loginUser = [
 eventsController.logoutUser = [
   async (req, res) => {
     try {
-      console.log(req.header('x-auth'));
       await req.user.removeToken(req.header('x-auth'));
       res.status(200).send();
     } catch (e) {
@@ -97,7 +96,6 @@ eventsController.setPreferences = [
 
       res.send(body);
     } catch (e) {
-        console.log(e);
         res.status(400).send('Invalid classificationName and/or genreId');
     }
   }
